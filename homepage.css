@@ -7,7 +7,68 @@
 }
 
 
+/* FIX THIS FIRST (IMPORTANT BUG FIX) */
+.section h2 {
+    margin-bottom: 20px;
+    color: #00f7ff;
+}
 
+.section p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+/* GALLERY GRID */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+/* IMAGE */
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s ease;
+}
+
+/* OVERLAY */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-card:hover .card-overlay {
+    opacity: 1;
+}
+
+/* TEXT */
+.card-overlay h3 {
+    font-size: 1.2rem;
+    color: #00f7ff;
+}
 
 
 /* NAVBAR */
